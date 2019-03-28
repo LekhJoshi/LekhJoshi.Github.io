@@ -19,24 +19,16 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('tabsController.settings', {
+  .state('settings', {
     url: '/settings',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/settings.html',
-        controller: 'settingsCtrl'
-      }
-    }
+    templateUrl: 'templates/settings.html',
+    controller: 'settingsCtrl'
   })
 
-  .state('tabsController.account', {
+  .state('account', {
     url: '/account',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/account.html',
-        controller: 'accountCtrl'
-      }
-    }
+    templateUrl: 'templates/account.html',
+    controller: 'accountCtrl'
   })
 
   .state('tabsController', {
@@ -45,14 +37,22 @@ angular.module('app.routes', [])
     abstract:true
   })
 
-  .state('tabsController.squad', {
+  .state('squad', {
     url: '/squad',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/squad.html',
-        controller: 'squadCtrl'
-      }
-    }
+    templateUrl: 'templates/squad.html',
+    controller: 'squadCtrl'
+  })
+
+  .state('facts', {
+    url: '/facts',
+    templateUrl: 'templates/facts.html',
+    controller: 'factsCtrl'
+  })
+
+  .state('quiz', {
+    url: '/quiz',
+    templateUrl: 'templates/quiz.html',
+    controller: 'quizCtrl'
   })
 
 $urlRouterProvider.otherwise('/page1/home')
